@@ -1,0 +1,71 @@
+
+
+.menu{ 
+}
+
+
+.capa{
+	height: 25%;
+	float: left;
+	margin-right: 0.5em;
+}
+#corpo{
+	width: 90%;
+	margin: auto;
+}
+.indice{
+	width: 103.5%;		
+	
+	
+}
+#rod {	
+	margin-left:60px;
+	margin-right:60px;
+	height: 10%; 
+	text-align: center;		
+}
+.imginicio{
+	width: 210px;
+	height: 240px;
+	float: left;
+	margin: 1em;
+}
+
+.mensagem{
+	width: 20em; 
+	margin-bottom:0.8em;
+}
+
+.planofundo{
+	background-image: url(../img/fundo.jpg) ;
+    width:1250px;
+    height:450px;   
+    background-repeat: no-repeat;
+	overflow: auto;
+	position: relative;    	
+}
+
+.rodape2{	
+	height: 100px;
+	float: left;	
+}
+.rodape1{
+	height: 100px;
+	float: right;
+}
+
+.quemsomos{
+	margin:60px;
+
+}
+
+.fachada{
+	width: 500px;
+	height: 250px;
+
+}
+
+.mapa{
+background-image: url(../img/localizacao.jpg) ;
+	margin: auto;
+}

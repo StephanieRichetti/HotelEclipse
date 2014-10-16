@@ -1,0 +1,41 @@
+.content{
+	margin-top: 35px;
+}
+
+.planodefundo{
+	width: 820px;
+    height: 450px;     
+}
+
+.fachada{
+	width: 500px;
+	height: 250px;	
+}
+
+.mapa{
+	 
+}
+
+.vantagens{
+	width: 1110px;
+    height: 180px;  
+}
+
+body { 
+    background: #fcfff4; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfff4), color-stop(40%,#dfe5d7), color-stop(100%,#b3bead)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 ); /* IE6-9 */
+
+}
+
+.rodape{
+	height: 1000px;
+		
+}
+
+	 
