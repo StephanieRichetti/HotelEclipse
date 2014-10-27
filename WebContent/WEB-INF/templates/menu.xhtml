@@ -3,6 +3,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
 	
+	
 	 <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
      
@@ -18,13 +19,23 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul id="menu_principal" class="nav navbar-nav">
-            <li><a href="index.xhtml">Home</a></li>           
-            <li><a href="quemsomos.xhtml">Quem Somos</a></li>
-             <li><a href="reserva.xhtml">Reserva</a></li>
-             <li><a href="localizacao.xhtml">Localização</a></li>
-              <li><a href="contatos.xhtml">Fale Conosco</a></li>
+            <li><h:link outcome="/index" value="Home" /></li>           
+            <li><h:link outcome="/quemsomos" value="Quem Somos" /></li>
+            <li><h:link outcome="/localizacao" value="Localização" /></li>
+            <li><h:link outcome="/contatos" value="Contato" /></li>
+            
         
           </ul>
+          	<ul id="menu_admin" class="nav navbar-nav navbar-right">
+					<li class="dropdown"> <a href="#" class="dropdown-toggle"
+						data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Admin <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><h:link outcome="/admin/formcadcliente" value="Cadastrar Clientes" /></li>
+							<li><h:link outcome="/admin//listagemClientes" value="Listar CLientes" /></li>
+						</ul></li>
+				</ul>
+          
+          
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
