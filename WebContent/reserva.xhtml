@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="WEB-INF/templates/base.xhtml">
+	<ui:define name="page-title">
+		<h1>Reservas</h1>
+	</ui:define>
+	<ui:define name="content">
+		<div class="panel panel-default col-md-9">
+			<div class="panel-body">
+			<p class="bg-success">
+			<label>Chegada:  </label><input type="date" value="data" ></input>
+			<label>Saída:  </label><input type="date" value="data" ></input>
+			<label>Quartos:  </label>			
+			<select name="Quartos" id="quartos">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		
+			<label>Pessoas:  </label>			
+			<select name="Pessoas" id="pessoas">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select><br/>
+			
+			<br/><h:commandButton action="{contatoMB.enviar}" styleClass="btn btn-default" value="Buscar"/>
+			
+			</div>	
+						
+		</div>	
+		
+	
+		
+			   <body>
+		
+			</p>						
+		</div>	
+		</div>
+	</ui:define>
+</ui:composition>
+</html>
