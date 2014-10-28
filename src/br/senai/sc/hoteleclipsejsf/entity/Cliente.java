@@ -17,8 +17,7 @@ import javax.persistence.Id;
 	private String endereco;
 	private String email;
 	private String telefone;
-	private String data_nascimento;	
-	private String mensagem;
+	
 	
 	
 	public Integer getIdCliente() {
@@ -51,22 +50,12 @@ import javax.persistence.Id;
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getMensagem() {
-		return mensagem;
-	}
-	public void setMensagem(String mensagem) {
-		this.mensagem = mensagem;
-	}
+	
 	public String getTelefone() {
 		return telefone;
 	}
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	public String getData_nascimento() {
-		return data_nascimento;
-	}
-	public void setData_nascimento(String data_nascimento) {
-		this.data_nascimento = data_nascimento;
-	}
+	
 }

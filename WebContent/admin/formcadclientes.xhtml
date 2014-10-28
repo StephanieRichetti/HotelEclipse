@@ -24,23 +24,31 @@
 						<h:outputLabel value="Nome" />
 						<h:inputText value="#{clienteMb.nome}" styleClass="form-control" />
 					</div>
-
+					
 					<div class="form-group">
-						<h:outputLabel value="Chegada:" />
-						<h:inputText value="#{clienteMb.chegada}"
-							styleClass="form-control" />
-					</div>
-
-					<div class="form-group">
-						<h:outputLabel value="Saída:" />
-						<h:inputText value="#{clienteMb.saida}" styleClass="form-control" />
-					</div>
-
-					<div class="form-group">
-						<h:outputLabel value="Mensagem" />
-						<h:inputTextarea value="#{clienteMb.mensagem}"
-							styleClass="form-control" />
-					</div>
+								<h:outputLabel value="E-mail:" />
+								<h:inputText value="#{clienteMb.email}" type="email"
+									class="form-control" placeholder="Email" />
+							</div>
+							
+							<div class="form-group">
+								<h:outputLabel value="CPF:" />
+								<h:inputText value="#{clienteMb.cpf}" type="text"
+									class="form-control" placeholder="CPF" />
+							</div>
+							
+							<div class="form-group">
+								<h:outputLabel value="Telefone:" />
+								<h:inputText value="#{clienteMb.telefone}"
+									styleClass="form-control" />
+							</div>
+							
+							<div class="form-group">
+								<h:outputLabel value="Endereço:" />
+								<h:inputText value="#{clienteMb.endereco}"
+									styleClass="form-control" />
+							</div>
+				
 
 					<div class="botaoSalvar">
 							<h:commandButton action="#{clienteMb.salvar}"

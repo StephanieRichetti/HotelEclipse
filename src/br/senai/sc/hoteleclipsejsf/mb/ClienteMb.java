@@ -2,26 +2,32 @@ package br.senai.sc.hoteleclipsejsf.mb;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
+import br.senai.sc.hoteleclipsejsf.entity.Cliente;
 import br.senai.sc.hoteleclipsejsf.entity.Reserva;
+import br.senai.sc.hoteleclipsejsf.util.Util;
+
+
 
 
 	@ManagedBean
 	public class ClienteMb {
+	
 		private EntityManager entityManager;
-		private Reserva cliente;
-		private List<Reserva> listaClientes;
+		private Cliente cliente;
+		private List<Cliente> listaClientes;
 		private String nome;
 		private String cpf;	
 		private String endereco;
 		private String email;
 		private String telefone;
-		private String data_nascimento;	
-		
-		
+	
+	
 		public String getNome() {
 			return nome;
 		}
@@ -52,20 +58,7 @@ import br.senai.sc.hoteleclipsejsf.entity.Reserva;
 		public void setTelefone(String telefone) {
 			this.telefone = telefone;
 		}
-		public String getData_nascimento() {
-			return data_nascimento;
-		}
-		public void setData_nascimento(String data_nascimento) {
-			this.data_nascimento = data_nascimento;
-		}
-		public String getMensagem() {
-			return mensagem;
-		}
-		public void setMensagem(String mensagem) {
-			this.mensagem = mensagem;
-		}
-		private String mensagem;
-
+	
 
 	public void enviar(){
 		System.out.println("Nome: " + nome);
@@ -73,8 +66,7 @@ import br.senai.sc.hoteleclipsejsf.entity.Reserva;
 		System.out.println("Cpf: " + cpf);
 		System.out.println("Endereco: " + endereco);
 		System.out.println("Telefone: " + telefone);
-		System.out.println("Data nascimento: " + data_nascimento);
-		System.out.println("Mensagem: " + mensagem);
+		
 	}
 
 		public String salvar() {
@@ -83,12 +75,31 @@ import br.senai.sc.hoteleclipsejsf.entity.Reserva;
 
 		}
 		
-		public void setCliente(List<Reserva> cliente) {
+		public void setCliente(List<Cliente> cliente) {
 			this.listaClientes = cliente;
 		}		
+		
+		public String editar(Long ID){
+			cliente = entityManager.find(Cliente.class, ID);
+			return "formcadclientes";
+		}
+		
+		public String excluir(Long ID){
+		    Cliente cliente = entityManager.getReference(Cliente.class, ID);
+			entityManager.remove(cliente);
+			listaClientes = null;
+			return "listagemClientes";
+		}
+		
+	/*	public List<Cliente> getClientes(){
+			if ( cliente == null){
+				Query query = Util.getEntityManager().createQuery("From Cliente", Cliente.class);
+				cliente = query.getResultList();
+			}
+			return cliente;
+		}*/
+		
+		
 	}
-	
-	
-	
 	
 	
